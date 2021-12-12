@@ -1,2 +1,2 @@
 # nb-ios-app-client-calcTransportTime
-Текст программы на языке Swift, который содержит функцию для расчета времени пути на общественном транспорте.
+The text of the program in Swift, which contains a function for calculating the travel time on public transport.
