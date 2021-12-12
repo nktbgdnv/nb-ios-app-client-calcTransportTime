@@ -1,4 +1,3 @@
-// Курсовая работа по теме "Основы Swift"
 // создаем коллекцию - массив из словарей
 let newStationsData : [[String : Int]] = [["Ostankino" : 0], ["VVC" : 3], ["Dokukina" : 7], ["Raduzhnaya" : 12], ["Polyarnaya" : 20], ["Poliklinika" : 22], ["Tihomirova" : 30], ["Medvedkovo" : 40]]
 
