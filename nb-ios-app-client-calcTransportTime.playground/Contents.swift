@@ -1,7 +1,7 @@
-// создаем коллекцию - массив из словарей
+// create a collection - an array of dictionaries
 let newStationsData : [[String : Int]] = [["Ostankino" : 0], ["VVC" : 3], ["Dokukina" : 7], ["Raduzhnaya" : 12], ["Polyarnaya" : 20], ["Poliklinika" : 22], ["Tihomirova" : 30], ["Medvedkovo" : 40]]
 
-// инициализируем функцию, вычисляющую расстояние между станциями
+// initialize a function that calculates the distance between stations
 func calculateDistance(from firstStation: String, to secondStation: String) -> Int {
     var distance = 0
     if checkStationsInCollection(firstStation, secondStation) {
@@ -16,11 +16,12 @@ func calculateDistance(from firstStation: String, to secondStation: String) -> I
             }
         }
     }
-    return abs(distance)        // возвращает модуль расстояния (если пассажир едет в обратном направлении)
+    // returns the distance modulus (if the passenger is traveling in the opposite direction)
+    return abs(distance)
 }
 
-// функция проверки наличия станций №1 и №2 в исходной коллекции
-// если ввести станцию не из коллекции - печатает сообщение об ошибке
+// function of checking the presence of stations #1 and #2 in the original collection
+// if you enter a station not from the collection - prints an error message
 func checkStationsInCollection(_ firstStation: String, _ secondStation: String) -> Bool {
     var isFirstStationIsInCollection = false
     var isSecondStationIsInCollection = false
@@ -37,11 +38,11 @@ func checkStationsInCollection(_ firstStation: String, _ secondStation: String) 
     if isFirstStationIsInCollection && isSecondStationIsInCollection {
         return true
     } else {
-        print("Проверьте правильность написания названий станций!")
+        print("Please, check the spelling of the station names!")
         return false
     }
 }
 
-// вызываем функцию, вычисляющую расстояние между заданными станциями
+// call the function that calculates the distance between the given stations
 var distanceBetweenStations = calculateDistance(from: "Raduzhnaya", to: "Polyarnaya")
-print("Длительность поездки между выбранными станциями составит: \(distanceBetweenStations)")
+print("The duration of the trip between the selected stations will be: \(distanceBetweenStations)")
